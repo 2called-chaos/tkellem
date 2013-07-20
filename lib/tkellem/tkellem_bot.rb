@@ -12,8 +12,10 @@ class TkellemBot
     command_name = args.shift.try(:upcase)
     command = commands[command_name]
 
+    exit if ["exit", "quit"].include?(command_name)
+
     unless command
-      yield "Invalid command. Use help for a command listing."
+      yield "Invalid command. Use 'help' to get a list of commands or 'exit' to quit."
       return
     end
 
