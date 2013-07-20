@@ -13,7 +13,7 @@ class TkellemBot
     command = commands[command_name]
 
     unless command
-      yield "Invalid command. Use help for a command listing." if command_name
+      yield "Invalid command. Use help for a command listing."
       return
     end
 
